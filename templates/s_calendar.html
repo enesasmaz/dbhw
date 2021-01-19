@@ -1,0 +1,89 @@
+{% extends "layout.html"%}
+{%block content%}
+<p>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Student Calendar</title>
+  
+  <link rel="stylesheet" href="https:  cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="static/style1.css">
+
+      
+</head>
+
+<body>
+  
+<main>
+  <table class="calendar">
+    <caption class="calendar__banner--month">
+      <h1>January</h1>
+    </caption>
+    <thead>
+      <tr>
+        <th class="calendar__day__header">Mon</th>
+        <th class="calendar__day__header">Tues</th>
+        <th class="calendar__day__header">Wed</th>
+        <th class="calendar__day__header">Thurs</th>
+        <th class="calendar__day__header">Fri</th>
+        <th class="calendar__day__header">Sat</th>
+        <th class="calendar__day__header">Sun</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/1">1</a><p>  <font size="1"><center>{{caldays[0]['events']}}  {{caldays[0]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/2">2</a><p>  <font size="1"><center>{{caldays[1]['events']}}  {{caldays[1]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/3">3</a><p>  <font size="1"><center>{{caldays[2]['events']}}  {{caldays[2]['time']}}</center> </font></p></td>
+      </tr>
+      <tr>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/4">4</a><p>  <font size="1"><center>{{caldays[3]['events']}}  {{caldays[3]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/5">5</a><p>  <font size="1"><center>{{caldays[4]['events']}}  {{caldays[4]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/6">6</a><p>  <font size="1"><center>{{caldays[5]['events']}}  {{caldays[5]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/7">7</a><p>  <font size="1"><center>{{caldays[6]['events']}}  {{caldays[6]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/8">8</a><p>  <font size="1"><center>{{caldays[7]['events']}}  {{caldays[7]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/9">9</a><p>  <font size="1"><center>{{caldays[8]['events']}}  {{caldays[8]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/10">10</a><p>  <font size="1"><center>{{caldays[9]['events']}}  {{caldays[9]['time']}}</center> </font></p></td>
+      </tr>
+      <tr>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/11">11</a><p>  <font size="1"><center>{{caldays[10]['events']}}  {{caldays[10]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/12">12</a><p>  <font size="1"><center>{{caldays[11]['events']}}  {{caldays[11]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/13">13</a><p>  <font size="1"><center>{{caldays[12]['events']}}  {{caldays[12]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/14">14</a><p>  <font size="1"><center>{{caldays[13]['events']}}  {{caldays[13]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/15">15</a><p>  <font size="1"><center>{{caldays[14]['events']}}  {{caldays[14]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/16">16</a><p>  <font size="1"><center>{{caldays[15]['events']}}  {{caldays[15]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/17">17</a><p>  <font size="1"><center>{{caldays[16]['events']}}  {{caldays[16]['time']}}</center> </font></p></td>
+      </tr>
+      <tr>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/18">18</a><p>  <font size="1"><center>{{caldays[17]['events']}}  {{caldays[17]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/19">19</a><p>  <font size="1"><center>{{caldays[18]['events']}}  {{caldays[18]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/20">20</a><p>  <font size="1"><center>{{caldays[19]['events']}}  {{caldays[19]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/21">21</a><p>  <font size="1"><center>{{caldays[20]['events']}}  {{caldays[20]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/22">22</a><p>  <font size="1"><center>{{caldays[21]['events']}}  {{caldays[21]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/23">23</a><p>  <font size="1"><center>{{caldays[22]['events']}}  {{caldays[22]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/24">24</a><p>  <font size="1"><center>{{caldays[23]['events']}}  {{caldays[23]['time']}}</center> </font></p></td>
+      </tr>
+      <tr>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/25">25</a><p>  <font size="1"><center>{{caldays[24]['events']}}  {{caldays[24]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/26">26</a><p>  <font size="1"><center>{{caldays[25]['events']}}  {{caldays[25]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/27">27</a><p>  <font size="1"><center>{{caldays[26]['events']}}  {{caldays[26]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/28">28</a><p>  <font size="1"><center>{{caldays[27]['events']}}  {{caldays[27]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/29">29</a><p>  <font size="1"><center>{{caldays[28]['events']}}  {{caldays[28]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/30">30</a><p>  <font size="1"><center>{{caldays[29]['events']}}  {{caldays[29]['time']}}</center> </font></p></td>
+        <td class="calendar__day__cell"><a href="/day/{{s_id}}/31">31</a><p>  <font size="1"><center>{{caldays[30]['events']}}  {{caldays[30]['time']}}</center> </font></p></td>
+      </tr>
+    </tbody>
+  </table>
+</main>
+  
+  
+</body>
+</html>
+ </font></p>
+{%endblock%}

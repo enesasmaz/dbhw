@@ -1,0 +1,33 @@
+{% extends "layout.html"%}
+{%block content%}
+<p>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Teacher Login</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="login">
+			<h1>Login</h1>
+			<div class="links">
+				<a href="/t_login" class="active">Teacher Login</a>
+				<a href="/t_sign">Teacher Register</a>
+			</div>
+			<form action="/afterlogin_t" method="post">
+				<label for="t_mail">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="t_mail" placeholder="Mail" id="t_mail" required>
+				<label for="t_mail">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="t_password" placeholder="Password" id="t_password" required>
+				<input type="submit" value="Login">
+			</form>
+		</div>
+	</body>
+</html>
+</p>
+{%endblock%}

@@ -1,0 +1,41 @@
+{% extends "layout.html"%}
+{%block content%}
+<p>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Student Register</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="register">
+			<h1>Register</h1>
+			<div class="links">
+				<a href="/s_login">Student Login</a>
+				<a href="/s_sign" class="active">Student Register</a>
+			</div>
+			<form action="/aftersign_s" method="post" autocomplete="off">
+				<label for="s_id">
+					<i class="fas fa-user"></i>
+				</label>
+                <input type="text" name="s_id" placeholder="Student ID"> <br>
+                <label for="s_name">
+					<i class="fas fa-user"></i>
+				</label>
+                <input type="text" name="s_name" placeholder="Student Name"> <br>
+                <label for="s_password">
+					<i class="fas fa-lock"></i>
+				</label>
+                <input type="text" name="s_password" placeholder="Password"> <br>
+				<label for="s_mail">
+					<i class="fas fa-envelope"></i>
+				</label>
+                <input type="email" name="s_mail" placeholder="Student Mail"> <br>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</body>
+</html>
+</p>
+{%endblock%}
